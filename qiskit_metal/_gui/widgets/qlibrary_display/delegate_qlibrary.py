@@ -33,11 +33,8 @@ class LibraryDelegate(QItemDelegate):
     def __init__(self, parent: QWidget = None):
         """
          Initializer for LibraryDelegate
-
-
         Arguments:
             parent(QWidget): parent
-
         """
         super().__init__(parent)
         #  The Delegate may belong to a view using a ProxyModel but even so
@@ -50,20 +47,13 @@ class LibraryDelegate(QItemDelegate):
         The Delegate may belong to a view using a ProxyModel. However,
         the source model for that Proxy Model(s) should be a QFileSystemLibraryModel
         and is returned by this function
-
-
         Arguments:
             model(QAbstractItemModel): Current model
             source_type(type): Expected source model type
-
         Returns:
-            QFileSystemLibraryModel: Source model 
-
+            QFileSystemLibraryModel: Source model
         Raises:
             QLibraryGUIException: If unable to find the source model for the given model
-
-
-
         """
         while True:
             # https://stackoverflow.com/questions/50478661/python-isinstance-not-working-as-id-expect
@@ -85,15 +75,10 @@ class LibraryDelegate(QItemDelegate):
         """
         Displays dirty files in red with corresponding rebuild buttons
         if in developer mode (is_dev_mode). Otherwise, renders normally
-
-
         Args:
             painter (QPainter): Current painter
             option (QStyleOptionViewItem): Current option
             index (QModelIndex): Current index of related model
-
-
-
         """
         if self.is_dev_mode:
             source_model = self.get_source_model(index.model(),
