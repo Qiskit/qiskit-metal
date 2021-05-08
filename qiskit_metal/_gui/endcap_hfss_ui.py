@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './endcap_hfss_ui.ui',
 # licensing of './endcap_hfss_ui.ui' applies.
 #
-# Created: Wed May  5 16:57:40 2021
+# Created: Sat May  8 15:12:15 2021
 #      by: pyside2-uic  running on PySide2 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
