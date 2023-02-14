@@ -14,10 +14,10 @@
 
 from typing import TYPE_CHECKING
 
-from PySide2 import QtCore, QtWidgets
-from PySide2.QtCore import QModelIndex, Qt
-from PySide2.QtGui import QContextMenuEvent
-from PySide2.QtWidgets import (QInputDialog, QLineEdit, QMenu, QMessageBox,
+from PySide6 import QtCore, QtWidgets
+from PySide6.QtCore import QModelIndex, Qt
+from PySide6.QtGui import QContextMenuEvent
+from PySide6.QtWidgets import (QInputDialog, QLineEdit, QMenu, QMessageBox,
                                QTableView, QLabel, QVBoxLayout, QWidget)
 
 
@@ -72,12 +72,12 @@ class QWidget_PlaceholderText(QWidget):
         palette = self.palette()
         # This enum value has been introduced in Qt 5.12
         if hasattr(palette, 'PlaceholderText'):
-            placeholder_color = palette.PlaceholderText
+            placeholder_color = palette.ColorRole.PlaceholderText
         else:
-            placeholder_color = palette.WindowText
+            placeholder_color = palette.ColorRole.WindowText
         color = palette.color(placeholder_color)
-        palette.setColor(palette.Text, color)
-        palette.setColor(palette.Text, color)
+        palette.setColor(palette.ColorRole.Text, color)
+        palette.setColor(palette.ColorRole.Text, color)
         label.setPalette(palette)
 
     def show_placeholder_text(self):

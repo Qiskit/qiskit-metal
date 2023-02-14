@@ -9,7 +9,7 @@ pandas
 pint
 pyEPR-quantum>=0.8.5.7
 pygments
-pyside2
+pyside6
 qdarkstyle
 qutip
 scipy
